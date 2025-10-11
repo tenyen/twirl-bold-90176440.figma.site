@@ -169,7 +169,7 @@ export const MainContent = () => {
           </div>
 
           {/* Hand-Drawn Grass at Bottom - Fixed positioning */}
-          <div className="fixed bottom-0 left-0 right-0 pointer-events-none z-[90]" style={{ height: '80px' }}>
+          <div className="fixed bottom-0 left-0 right-0 pointer-events-none z-[90]" style={{ height: '40px' }}>
             <style>{`
               @keyframes grass-draw {
                 0% { 
@@ -215,28 +215,28 @@ export const MainContent = () => {
                 }
               }
             `}</style>
-            <svg className="w-full h-full" viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <svg className="w-full h-full" viewBox="0 0 1440 40" preserveAspectRatio="none">
               {/* Hand-drawn grass blades with sketchy style */}
               {Array.from({ length: 100 }).map((_, i) => {
                 const x = (i * 1440) / 100 + Math.random() * 10;
-                const height = 25 + Math.random() * 35;
-                const curve = Math.random() * 15 - 7.5;
+                const height = 12 + Math.random() * 18;
+                const curve = Math.random() * 8 - 4;
                 const delay = Math.random() * 2;
                 const swayDelay = Math.random() * 4;
                 const colors = ['#10B981', '#22C55E', '#34D399', '#6EE7B7', '#059669'];
                 const color = colors[Math.floor(Math.random() * colors.length)];
                 
                 // Create hand-drawn wavy path
-                const path = `M ${x} 80 Q ${x + curve} ${80 - height / 2} ${x + curve * 1.5} ${80 - height} Q ${x + curve * 2} ${80 - height / 2} ${x + curve * 1.2} ${80 - height * 0.8}`;
-                
+                const path = `M ${x} 40 Q ${x + curve} ${40 - height / 2} ${x + curve * 1.5} ${40 - height} Q ${x + curve * 2} ${40 - height / 2} ${x + curve * 1.2} ${40 - height * 0.8}`;
+
                 return (
-                  <g key={i} style={{ 
-                    transformOrigin: `${x}px 80px`,
+                  <g key={i} style={{
+                    transformOrigin: `${x}px 40px`,
                   }}>
                     <path
                       d={path}
                       stroke={color}
-                      strokeWidth={2 + Math.random()}
+                      strokeWidth={1.5 + Math.random()}
                       fill="none"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -245,15 +245,15 @@ export const MainContent = () => {
                       strokeDashoffset="100"
                       style={{
                         animation: `grass-draw 1.2s ease-out ${delay}s forwards, grass-sway ${3 + Math.random() * 2}s ease-in-out ${delay + 1.2 + swayDelay}s infinite`,
-                        transformOrigin: `${x}px 80px`
+                        transformOrigin: `${x}px 40px`
                       }}
                     />
                     {/* Add small details/tips to grass */}
                     {Math.random() > 0.5 && (
                       <circle
                         cx={x + curve * 1.5}
-                        cy={80 - height}
-                        r="2"
+                        cy={40 - height}
+                        r="1.5"
                         fill={color}
                         opacity="0.7"
                       />
@@ -263,22 +263,22 @@ export const MainContent = () => {
               })}
               
               {/* Add some small flowers scattered in grass */}
-              {Array.from({ length: 20 }).map((_, i) => {
+              {Array.from({ length: 12 }).map((_, i) => {
                 const x = Math.random() * 1440;
-                const y = 55 + Math.random() * 15;
+                const y = 28 + Math.random() * 8;
                 const flowerColors = ['#FFC94D', '#FF6B6B', '#5CE1E6', '#FB923C'];
                 const flowerColor = flowerColors[Math.floor(Math.random() * flowerColors.length)];
                 const delay = 2 + Math.random() * 2;
-                
+
                 return (
                   <g key={`flower-${i}`} style={{
                     transformOrigin: `${x}px ${y}px`
                   }}>
                     {/* Flower stem */}
                     <path
-                      d={`M ${x} 80 L ${x} ${y}`}
+                      d={`M ${x} 40 L ${x} ${y}`}
                       stroke="#22C55E"
-                      strokeWidth="2"
+                      strokeWidth="1.5"
                       fill="none"
                       strokeDasharray="50"
                       strokeDashoffset="50"
@@ -292,40 +292,40 @@ export const MainContent = () => {
                       animation: `flower-bloom 0.5s ease-out ${delay + 0.6}s forwards`,
                       opacity: 0
                     }}>
-                      <circle cx={x} cy={y} r="4" fill={flowerColor} opacity="0.9" />
-                      <circle cx={x - 3} cy={y - 1} r="3" fill={flowerColor} opacity="0.8" />
-                      <circle cx={x + 3} cy={y - 1} r="3" fill={flowerColor} opacity="0.8" />
-                      <circle cx={x - 2} cy={y + 2.5} r="3" fill={flowerColor} opacity="0.8" />
-                      <circle cx={x + 2} cy={y + 2.5} r="3" fill={flowerColor} opacity="0.8" />
+                      <circle cx={x} cy={y} r="3" fill={flowerColor} opacity="0.9" />
+                      <circle cx={x - 2.5} cy={y - 0.8} r="2.2" fill={flowerColor} opacity="0.8" />
+                      <circle cx={x + 2.5} cy={y - 0.8} r="2.2" fill={flowerColor} opacity="0.8" />
+                      <circle cx={x - 1.5} cy={y + 2} r="2.2" fill={flowerColor} opacity="0.8" />
+                      <circle cx={x + 1.5} cy={y + 2} r="2.2" fill={flowerColor} opacity="0.8" />
                       {/* Flower center */}
-                      <circle cx={x} cy={y} r="2" fill="#FFF" opacity="0.9" />
+                      <circle cx={x} cy={y} r="1.5" fill="#FFF" opacity="0.9" />
                     </g>
                   </g>
                 );
               })}
 
               {/* Add some taller grass clumps */}
-              {Array.from({ length: 30 }).map((_, i) => {
+              {Array.from({ length: 20 }).map((_, i) => {
                 const x = Math.random() * 1440;
                 const delay = Math.random() * 2.5;
                 const swayDelay = Math.random() * 2;
-                
+
                 return (
                   <g key={`clump-${i}`} style={{
-                    transformOrigin: `${x}px 80px`,
+                    transformOrigin: `${x}px 40px`,
                   }}>
                     {/* Multiple blades in a clump */}
                     {[0, 1, 2].map((blade) => {
-                      const offset = (blade - 1) * 5;
-                      const height = 40 + Math.random() * 25;
-                      const curve = Math.random() * 12 - 6;
-                      
+                      const offset = (blade - 1) * 3;
+                      const height = 20 + Math.random() * 12;
+                      const curve = Math.random() * 6 - 3;
+
                       return (
                         <path
                           key={blade}
-                          d={`M ${x + offset} 80 Q ${x + offset + curve} ${80 - height / 2} ${x + offset + curve * 1.5} ${80 - height}`}
+                          d={`M ${x + offset} 40 Q ${x + offset + curve} ${40 - height / 2} ${x + offset + curve * 1.5} ${40 - height}`}
                           stroke="#059669"
-                          strokeWidth="2.5"
+                          strokeWidth="2"
                           fill="none"
                           strokeLinecap="round"
                           opacity="0"
@@ -333,7 +333,7 @@ export const MainContent = () => {
                           strokeDashoffset="100"
                           style={{
                             animation: `grass-draw 1.3s ease-out ${delay + blade * 0.15}s forwards, grass-sway ${2.5 + Math.random()}s ease-in-out ${delay + 1.3 + swayDelay}s infinite`,
-                            transformOrigin: `${x + offset}px 80px`
+                            transformOrigin: `${x + offset}px 40px`
                           }}
                         />
                       );
@@ -535,17 +535,17 @@ export const MainContent = () => {
           </div>
           
           {/* Cute Ladybug crawling in the grass */}
-          <div className="fixed bottom-0 left-0 w-full pointer-events-none z-[95]" style={{ height: '80px' }}>
+          <div className="fixed bottom-0 left-0 w-full pointer-events-none z-[95]" style={{ height: '40px' }}>
             <style>{`
               @keyframes ladybug-crawl-grass {
-                0% { left: -5%; bottom: 10px; }
-                15% { left: 15%; bottom: 25px; }
-                30% { left: 30%; bottom: 15px; }
-                45% { left: 45%; bottom: 30px; }
-                60% { left: 60%; bottom: 20px; }
-                75% { left: 75%; bottom: 28px; }
-                90% { left: 90%; bottom: 18px; }
-                100% { left: 105%; bottom: 15px; }
+                0% { left: -5%; bottom: 5px; }
+                15% { left: 15%; bottom: 15px; }
+                30% { left: 30%; bottom: 8px; }
+                45% { left: 45%; bottom: 18px; }
+                60% { left: 60%; bottom: 12px; }
+                75% { left: 75%; bottom: 16px; }
+                90% { left: 90%; bottom: 10px; }
+                100% { left: 105%; bottom: 8px; }
               }
               @keyframes ladybug-legs {
                 0%, 100% { transform: scaleY(1); }
