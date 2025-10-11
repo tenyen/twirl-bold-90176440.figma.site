@@ -1,12 +1,12 @@
 // src/context/UserContext.tsx
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { auth } from '@/firebase'; // Import auth from your firebase.ts
-import { User, onAuthStateChanged } from 'firebase/auth'; // Import User type and onAuthStateChanged
+import { supabase } from '@/supabase';
+import type { User } from '@supabase/supabase-js';
 
 interface UserContextType {
   user: User | null;
   loading: boolean;
-  userType: 'face' | 'creator' | 'brand' | null; // Custom user type
+  userType: 'face' | 'creator' | 'brand' | null;
   setUserType: (type: 'face' | 'creator' | 'brand' | null) => void;
 }
 
@@ -18,14 +18,18 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
   const [userType, setUserType] = useState<'face' | 'creator' | 'brand' | null>(null);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setUser(session?.user ?? null);
       setLoading(false);
-      // You might load userType from Realtime DB here if stored with user profile
-      // For now, we'll rely on explicit setting after sign-in/sign-up
     });
 
-    return () => unsubscribe();
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null);
+    });
+
+    return () => subscription.unsubscribe();
   }, []);
 
   return (
