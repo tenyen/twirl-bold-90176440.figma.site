@@ -127,6 +127,11 @@ export const CreatorSignUp = () => {
       return;
     }
 
+    if (!supabase) {
+      alert('Database is not configured. Please contact support.');
+      return;
+    }
+
     try {
       const { data: authData, error: authError } = await supabase.auth.signUp({
         email: formData.email,

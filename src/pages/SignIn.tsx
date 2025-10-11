@@ -17,6 +17,11 @@ export const SignIn = () => {
     e.preventDefault();
     setError(null);
 
+    if (!supabase) {
+      setError('Database is not configured. Please contact support.');
+      return;
+    }
+
     try {
       const { data: authData, error: authError } = await supabase.auth.signInWithPassword({
         email,

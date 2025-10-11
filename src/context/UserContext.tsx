@@ -18,6 +18,11 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
   const [userType, setUserType] = useState<'face' | 'creator' | 'brand' | null>(null);
 
   useEffect(() => {
+    if (!supabase) {
+      setLoading(false);
+      return;
+    }
+
     supabase.auth.getSession().then(({ data: { session } }) => {
       setUser(session?.user ?? null);
       setLoading(false);
