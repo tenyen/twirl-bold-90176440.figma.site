@@ -631,6 +631,33 @@ export const MainContent = () => {
                         <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                       </svg>
                     </div>
+                    {/* Hand-drawn arrow annotation pointing to Face */}
+                    <div className="absolute -right-32 top-2 pointer-events-none hidden md:block">
+                      <svg width="120" height="60" viewBox="0 0 120 60" className="opacity-70">
+                        <style>{`
+                          @keyframes sketch-draw-arrow {
+                            from { stroke-dashoffset: 100; }
+                            to { stroke-dashoffset: 0; }
+                          }
+                        `}</style>
+                        <path
+                          d="M 10 30 Q 40 20 70 25 L 68 20 M 70 25 L 65 28"
+                          stroke="#22D3EE"
+                          strokeWidth="2.5"
+                          fill="none"
+                          strokeLinecap="round"
+                          strokeDasharray="100"
+                          strokeDashoffset="100"
+                          style={{ animation: 'sketch-draw-arrow 1s ease-out 1.5s forwards' }}
+                        />
+                        <text x="75" y="18" fill="#22D3EE" fontSize="13" fontWeight="600" opacity="0" style={{ animation: 'fade-in 0.5s ease-out 2.5s forwards' }}>
+                          Upload
+                        </text>
+                        <text x="75" y="32" fill="#22D3EE" fontSize="13" fontWeight="600" opacity="0" style={{ animation: 'fade-in 0.5s ease-out 2.5s forwards' }}>
+                          face here!
+                        </text>
+                      </svg>
+                    </div>
                   </div>
 
                   {/* Orbiting Icons - Creator (Bottom Left) */}
@@ -638,6 +665,27 @@ export const MainContent = () => {
                     <div className="w-16 h-16 bg-red-400 border-2 border-black flex items-center justify-center">
                       <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                      </svg>
+                    </div>
+                    {/* Hand-drawn arrow annotation pointing to Creator */}
+                    <div className="absolute -left-28 top-6 pointer-events-none hidden md:block">
+                      <svg width="110" height="50" viewBox="0 0 110 50" className="opacity-70">
+                        <path
+                          d="M 100 25 Q 70 18 40 22 L 42 17 M 40 22 L 45 25"
+                          stroke="#EF4444"
+                          strokeWidth="2.5"
+                          fill="none"
+                          strokeLinecap="round"
+                          strokeDasharray="100"
+                          strokeDashoffset="100"
+                          style={{ animation: 'sketch-draw-arrow 1s ease-out 2s forwards' }}
+                        />
+                        <text x="5" y="15" fill="#EF4444" fontSize="12" fontWeight="600" opacity="0" style={{ animation: 'fade-in 0.5s ease-out 3s forwards' }}>
+                          AI creators
+                        </text>
+                        <text x="5" y="28" fill="#EF4444" fontSize="12" fontWeight="600" opacity="0" style={{ animation: 'fade-in 0.5s ease-out 3s forwards' }}>
+                          build here
+                        </text>
                       </svg>
                     </div>
                   </div>
@@ -649,6 +697,27 @@ export const MainContent = () => {
                         <path d="M18 3v2h-2V3H8v2H6V3H4v18h2v-2h2v2h8v-2h2v2h2V3h-2zM8 17H6v-2h2v2zm0-4H6v-2h2v2zm0-4H6V7h2v2zm10 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/>
                       </svg>
                     </div>
+                    {/* Hand-drawn arrow annotation pointing to Studios */}
+                    <div className="absolute -right-28 top-6 pointer-events-none hidden md:block">
+                      <svg width="110" height="50" viewBox="0 0 110 50" className="opacity-70">
+                        <path
+                          d="M 10 25 Q 40 32 70 28 L 68 23 M 70 28 L 65 31"
+                          stroke="#FBBF24"
+                          strokeWidth="2.5"
+                          fill="none"
+                          strokeLinecap="round"
+                          strokeDasharray="100"
+                          strokeDashoffset="100"
+                          style={{ animation: 'sketch-draw-arrow 1s ease-out 2.5s forwards' }}
+                        />
+                        <text x="73" y="18" fill="#D97706" fontSize="12" fontWeight="600" opacity="0" style={{ animation: 'fade-in 0.5s ease-out 3.5s forwards' }}>
+                          Brands find
+                        </text>
+                        <text x="73" y="31" fill="#D97706" fontSize="12" fontWeight="600" opacity="0" style={{ animation: 'fade-in 0.5s ease-out 3.5s forwards' }}>
+                          talent here
+                        </text>
+                      </svg>
+                    </div>
                   </div>
 
                   {/* Connecting Lines */}
@@ -657,29 +726,125 @@ export const MainContent = () => {
                     <line x1="128" y1="128" x2="64" y2="224" stroke="currentColor" strokeWidth="2" className="text-red-400" />
                     <line x1="128" y1="128" x2="192" y2="224" stroke="currentColor" strokeWidth="2" className="text-yellow-400" />
                   </svg>
+
+                  {/* Hand-drawn circle annotation around center logo */}
+                  <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 256 256">
+                    <style>{`
+                      @keyframes fade-in {
+                        from { opacity: 0; }
+                        to { opacity: 1; }
+                      }
+                    `}</style>
+                    <circle
+                      cx="128"
+                      cy="128"
+                      r="50"
+                      stroke="#10B981"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeDasharray="315"
+                      strokeDashoffset="315"
+                      opacity="0.6"
+                      style={{ animation: 'sketch-draw-arrow 1.5s ease-out 1s forwards' }}
+                    />
+                    <text x="128" y="200" textAnchor="middle" fill="#059669" fontSize="14" fontWeight="600" opacity="0" style={{ animation: 'fade-in 0.5s ease-out 2.5s forwards' }}>
+                      The ecosystem hub
+                    </text>
+                  </svg>
                 </div>
               </div>
 
               {/* Primary CTAs */}
-              <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-                <button 
-                  onClick={() => navigate('/faces')}
-                  className="text-xl font-semibold bg-cyan-400 text-white px-12 py-6 border-2 border-black hover:bg-cyan-500 transition-colors w-full md:w-auto"
-                >
-                  I'm a Face
-                </button>
-                <button 
-                  onClick={() => navigate('/ai-creators')}
-                  className="text-xl font-semibold bg-red-400 text-white px-12 py-6 border-2 border-black hover:bg-red-500 transition-colors w-full md:w-auto"
-                >
-                  I'm an A.I. Creator
-                </button>
-                <button 
-                  onClick={() => navigate('/brands-studios')}
-                  className="text-xl font-semibold bg-yellow-400 text-black px-12 py-6 border-2 border-black hover:bg-yellow-500 transition-colors w-full md:w-auto"
-                >
-                  I'm a Brand/Studio
-                </button>
+              <div className="flex flex-col md:flex-row gap-6 justify-center items-center relative">
+                <div className="relative w-full md:w-auto">
+                  <button
+                    onClick={() => navigate('/faces')}
+                    className="text-xl font-semibold bg-cyan-400 text-white px-12 py-6 border-2 border-black hover:bg-cyan-500 transition-colors w-full md:w-auto relative z-10"
+                  >
+                    I'm a Face
+                  </button>
+                  {/* Scribbled underline annotation */}
+                  <svg className="absolute -bottom-8 left-1/2 -translate-x-1/2 pointer-events-none hidden md:block" width="180" height="30" viewBox="0 0 180 30">
+                    <path
+                      d="M 10 15 Q 50 12 90 15 T 170 15"
+                      stroke="#22D3EE"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeDasharray="180"
+                      strokeDashoffset="180"
+                      opacity="0.5"
+                      style={{ animation: 'sketch-draw-arrow 1s ease-out 3.5s forwards' }}
+                    />
+                    <path
+                      d="M 15 18 Q 55 15 95 18 T 165 18"
+                      stroke="#22D3EE"
+                      strokeWidth="1.5"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeDasharray="180"
+                      strokeDashoffset="180"
+                      opacity="0.4"
+                      style={{ animation: 'sketch-draw-arrow 1s ease-out 3.6s forwards' }}
+                    />
+                  </svg>
+                </div>
+
+                <div className="relative w-full md:w-auto">
+                  <button
+                    onClick={() => navigate('/ai-creators')}
+                    className="text-xl font-semibold bg-red-400 text-white px-12 py-6 border-2 border-black hover:bg-red-500 transition-colors w-full md:w-auto relative z-10"
+                  >
+                    I'm an A.I. Creator
+                  </button>
+                  {/* Scribbled circle annotation */}
+                  <svg className="absolute -top-2 -right-2 -bottom-2 -left-2 pointer-events-none hidden md:block" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <ellipse
+                      cx="50"
+                      cy="50"
+                      rx="48"
+                      ry="48"
+                      stroke="#EF4444"
+                      strokeWidth="1.5"
+                      fill="none"
+                      strokeDasharray="300"
+                      strokeDashoffset="300"
+                      opacity="0.4"
+                      style={{ animation: 'sketch-draw-arrow 1.2s ease-out 4s forwards' }}
+                    />
+                  </svg>
+                </div>
+
+                <div className="relative w-full md:w-auto">
+                  <button
+                    onClick={() => navigate('/brands-studios')}
+                    className="text-xl font-semibold bg-yellow-400 text-black px-12 py-6 border-2 border-black hover:bg-yellow-500 transition-colors w-full md:w-auto relative z-10"
+                  >
+                    I'm a Brand/Studio
+                  </button>
+                  {/* Hand-drawn checkmark annotation */}
+                  <svg className="absolute -right-12 top-1/2 -translate-y-1/2 pointer-events-none hidden md:block" width="40" height="40" viewBox="0 0 40 40">
+                    <path
+                      d="M 8 20 L 16 28 L 32 12"
+                      stroke="#D97706"
+                      strokeWidth="3"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeDasharray="50"
+                      strokeDashoffset="50"
+                      opacity="0.6"
+                      style={{ animation: 'sketch-draw-arrow 0.8s ease-out 4.5s forwards' }}
+                    />
+                  </svg>
+                </div>
+
+                {/* Annotation text below buttons */}
+                <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 text-center pointer-events-none w-full hidden md:block">
+                  <p className="text-sm text-gray-500 font-handwriting italic" style={{ opacity: 0, animation: 'fade-in 0.5s ease-out 5s forwards' }}>
+                    Pick your path to start earning
+                  </p>
+                </div>
               </div>
 
             </div>
