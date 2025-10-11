@@ -596,7 +596,7 @@ export const MainContent = () => {
             </div>
           </div>
 
-          <main className="box-border caret-transparent outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] flex items-center justify-center min-h-[calc(100vh-200px)] relative z-10 pb-32">
+          <main className="box-border caret-transparent outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] flex items-center justify-center relative z-10 py-12 md:py-16">
             <div className="max-w-5xl mx-auto px-4 text-center">
               
               {/* Main Heading with Typing Effect */}
