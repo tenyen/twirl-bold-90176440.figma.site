@@ -2,6 +2,7 @@ simport { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "@/sections/Footer";
 import { Navbar } from "@/sections/MainContent/components/Navbar";
+import { supabase } from "@/supabase";
 
 export const AccountCreation = () => {
   const navigate = useNavigate();
@@ -23,24 +24,47 @@ export const AccountCreation = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!supabase) {
+      alert("Database is not configured. Please contact support.");
+      return;
+    }
+
     if (formData.password !== formData.confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
-    
-    // Simulate account creation
-    console.log("Account creation data:", formData);
-    alert('🎉 Account created successfully! Welcome to Likelee.');
-    navigate('/thank-you'); // Redirect to a generic thank you page or a specific welcome page
-    
-    // Reset form
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      password: "",
-      confirmPassword: ""
-    });
+
+    try {
+      // Create auth user
+      const { data: authData, error: authError } = await supabase.auth.signUp({
+        email: formData.email,
+        password: formData.password,
+      });
+
+      if (authError) throw authError;
+
+      if (authData.user) {
+        // Create user profile
+        const { error: profileError } = await supabase
+          .from('user_profiles')
+          .insert({
+            id: authData.user.id,
+            email: formData.email,
+            first_name: formData.firstName,
+            last_name: formData.lastName,
+            account_type: 'face'
+          });
+
+        if (profileError) throw profileError;
+
+        alert('Account created successfully! Welcome to Likelee.');
+        navigate('/thank-you');
+      }
+    } catch (error: any) {
+      console.error("Account creation error:", error);
+      alert(error.message || "Failed to create account. Please try again.");
+    }
   };
 
   return (
