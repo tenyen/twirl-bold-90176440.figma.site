@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "@/sections/Footer";
-import { db } from "@/firebase"; // Import Firebase services
-import { ref as dbRef, push, serverTimestamp } from "firebase/database"; // Realtime Database imports
+import { supabase } from "@/supabase";
 
 export const FacesWaitlist = () => {
   const navigate = useNavigate();
@@ -27,25 +26,25 @@ export const FacesWaitlist = () => {
     e.preventDefault();
     
     const waitlistData = {
-      firstName: formData.firstName || "",
-      lastName: formData.lastName || "",
+      first_name: formData.firstName || "",
+      last_name: formData.lastName || "",
       email: formData.email || "",
       phone: formData.phone || "",
-      waitlistType: 'Faces Waitlist',
+      waitlist_type: 'Faces Waitlist',
       motivation1: formData.motivation1 || "",
       motivation2: formData.motivation2 || "",
-      createdAt: serverTimestamp(), // Use serverTimestamp for Realtime Database
     };
 
-    console.log("Data being sent to Realtime Database (Faces Waitlist):", waitlistData); // DEBUG LOG
     try {
-      await push(dbRef(db, 'facesWaitlist'), waitlistData);
+      const { error } = await supabase
+        .from('waitlist_submissions')
+        .insert([waitlistData]);
 
-      console.log("Faces Waitlist submitted successfully to Firebase Realtime Database:", formData);
-      navigate('/thank-you'); // Redirect to ThankYou page
+      if (error) throw error;
 
+      navigate('/thank-you');
     } catch (error) {
-      console.error('Firebase submission error:', error);
+      console.error('Submission error:', error);
       alert('Something went wrong with your submission. Please try again or contact us directly.');
     }
   };
