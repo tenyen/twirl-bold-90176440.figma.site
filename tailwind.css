@@ -40,34 +40,34 @@
   }
 
   .dark {
-    --background: 224 71% 4%;
-    --foreground: 213 31% 91%;
+    --background: 222 41% 5%;
+    --foreground: 0 0% 92%;
 
-    --muted: 223 47% 11%;
-    --muted-foreground: 215.4 16.3% 56.9%;
+    --muted: 222 30% 10%;
+    --muted-foreground: 225 5% 50%;
 
-    --accent: 216 34% 17%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 222 22% 11%;
+    --accent-foreground: 0 0% 92%;
 
-    --popover: 224 71% 4%;
-    --popover-foreground: 215 20.2% 65.1%;
+    --popover: 222 35% 7%;
+    --popover-foreground: 0 0% 92%;
 
-    --border: 216 34% 17%;
-    --input: 216 34% 17%;
+    --border: 0 0% 100% / 0.08;
+    --input: 222 22% 11%;
 
     --card: transparent;
-    --card-foreground: 213 31% 91%;
+    --card-foreground: 0 0% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 1.2%;
+    --primary: 0 0% 92%;
+    --primary-foreground: 222 41% 5%;
 
-    --secondary: 222.2 47.4% 11.2%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 222 35% 7%;
+    --secondary-foreground: 0 0% 92%;
 
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 13 100% 72%;
+    --destructive-foreground: 0 0% 92%;
 
-    --ring: 216 34% 17%;
+    --ring: 45 100% 70%;
 
     --radius: 0.5rem;
   }
@@ -91,5 +91,16 @@
   }
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+
+  .accent-gradient {
+    background: linear-gradient(90deg, #00C9B1, #FF8A70, #FFD46A);
+  }
+
+  .text-gradient {
+    background: linear-gradient(90deg, #00C9B1, #FF8A70, #FFD46A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }

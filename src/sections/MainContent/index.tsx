@@ -33,7 +33,7 @@ export const MainContent = () => {
       <StarConstellationModal isOpen={showModal} onClose={() => setShowModal(false)} />
 
       <div className="relative box-border caret-transparent basis-0 grow shrink-0 min-h-px min-w-px outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] w-full">
-        <div className="bg-gradient-to-br from-[#F4FDFD] via-[#F8EDE6] to-[#FFFCF5] dark:bg-[#0a0e1a] box-border caret-transparent min-h-screen outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] relative overflow-hidden pb-8 transition-all duration-1000">
+        <div className="bg-gradient-to-br from-[#F4FDFD] via-[#F8EDE6] to-[#FFFCF5] dark:bg-[#0B0C10] box-border caret-transparent min-h-screen outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] relative overflow-hidden pb-8 transition-all duration-1000">
 
           {/* Dark Mode Stars */}
           {theme === 'dark' && (
@@ -628,15 +628,15 @@ export const MainContent = () => {
 
           <main className="box-border caret-transparent outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] flex items-center justify-center relative z-10 py-12 md:py-16">
             <div className="max-w-5xl mx-auto px-4 text-center">
-              
+
               {/* Main Heading with Typing Effect */}
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight min-h-[4.5rem]">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight min-h-[4.5rem] dark:text-night-text">
                 {typedText}
                 {typedText.length < fullText.length && <span className="animate-pulse">|</span>}
               </h1>
-              
+
               {/* Sub-line */}
-              <p className="text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl text-gray-700 dark:text-night-muted mb-12 leading-relaxed max-w-3xl mx-auto">
                 Join a growing network that connects real people with AI creators and studios.
               </p>
 
@@ -694,19 +694,19 @@ export const MainContent = () => {
               <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
                 <button
                   onClick={() => navigate('/faces')}
-                  className="text-xl font-semibold bg-cyan-400 text-white px-12 py-6 border-2 border-black hover:bg-cyan-500 transition-colors w-full md:w-auto"
+                  className="text-xl font-semibold bg-cyan-400 text-white px-12 py-6 border-2 border-black hover:bg-cyan-500 dark:bg-transparent dark:border-brand-teal dark:text-brand-teal dark:hover:bg-night-mist transition-colors w-full md:w-auto"
                 >
                   I'm a Face
                 </button>
                 <button
                   onClick={() => navigate('/ai-creators')}
-                  className="text-xl font-semibold bg-red-400 text-white px-12 py-6 border-2 border-black hover:bg-red-500 transition-colors w-full md:w-auto"
+                  className="text-xl font-semibold bg-red-400 text-white px-12 py-6 border-2 border-black hover:bg-red-500 dark:bg-transparent dark:border-brand-coral dark:text-brand-coral dark:hover:bg-night-mist transition-colors w-full md:w-auto"
                 >
                   I'm an A.I. Creator
                 </button>
                 <button
                   onClick={() => navigate('/brands-studios')}
-                  className="text-xl font-semibold bg-yellow-400 text-black px-12 py-6 border-2 border-black hover:bg-yellow-500 transition-colors w-full md:w-auto"
+                  className="text-xl font-semibold bg-yellow-400 text-black px-12 py-6 border-2 border-black hover:bg-yellow-500 dark:bg-transparent dark:border-brand-gold dark:text-brand-gold dark:hover:bg-night-mist transition-colors w-full md:w-auto"
                 >
                   I'm a Brand/Studio
                 </button>

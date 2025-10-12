@@ -40,6 +40,21 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        midnight: {
+          DEFAULT: "#0B0C10",
+          soft: "#11131A",
+        },
+        brand: {
+          teal: "#00C9B1",
+          coral: "#FF8A70",
+          gold: "#FFD46A",
+        },
+        night: {
+          mist: "#1A1C22",
+          text: "#EAEAEA",
+          muted: "#A6A8B0",
+          ash: "#7A7C84",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
