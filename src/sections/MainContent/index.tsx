@@ -432,8 +432,6 @@ export const MainContent = () => {
 
             {/* Abstract Butterflies */}
             {[
-              { color: 'text-yellow-400', delay: '1.1s', duration: '26s', floatDelay: '0.6s', floatDuration: '4.5s', size: 'w-8 h-8', top: '20', left: '20', move: 'move-left-to-right' },
-              { color: 'text-orange-400', delay: '1.6s', duration: '29s', floatDelay: '1.1s', floatDuration: '5.2s', size: 'w-9 h-9', top: '25', right: '25', move: 'move-right-to-left' },
               { color: 'text-cyan-400', delay: '2.1s', duration: '24s', floatDelay: '1.6s', floatDuration: '4.8s', size: 'w-8 h-8', bottom: '20', left: '20', move: 'move-left-to-right' },
               { color: 'text-red-400', delay: '2.6s', duration: '30s', floatDelay: '2.1s', floatDuration: '5.8s', size: 'w-9 h-9', bottom: '25', right: '25', move: 'move-right-to-left' },
             ].map((butterfly, i) => (
