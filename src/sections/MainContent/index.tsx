@@ -404,10 +404,6 @@ export const MainContent = () => {
 
             {/* Wavy Lines */}
             {[
-              { color: 'text-cyan-400', delay: '0.5s', duration: '25s', floatDelay: '0s', floatDuration: '4s', path: 'M5,15 Q15,5 25,15 T45,15 T65,15', size: 'w-20 h-8', top: '12', left: '8', move: 'move-left-to-right' },
-              { color: 'text-red-400', delay: '1s', duration: '28s', floatDelay: '0.5s', floatDuration: '5s', path: 'M10,15 Q20,8 30,15 T50,15 T70,15 T90,15', size: 'w-24 h-10', top: '16', right: '12', move: 'move-right-to-left' },
-              { color: 'text-yellow-400', delay: '1.5s', duration: '22s', floatDelay: '1s', floatDuration: '4.5s', path: 'M10,20 Q20,10 30,20 T50,20 T70,20', size: 'w-18 h-12', top: '1/4', left: '6', move: 'move-left-to-right' },
-              { color: 'text-orange-400', delay: '2s', duration: '30s', floatDelay: '1.5s', floatDuration: '5.5s', path: 'M10,15 Q25,8 40,15 T70,15 T90,15', size: 'w-22 h-10', top: '1/3', right: '10', move: 'move-right-to-left' },
               { color: 'text-cyan-400', delay: '2.5s', duration: '26s', floatDelay: '2s', floatDuration: '4s', path: 'M10,15 Q20,10 30,15 T50,15 T70,15', size: 'w-20 h-8', top: '1/2', left: '10', move: 'move-left-to-right' },
               { color: 'text-red-400', delay: '3s', duration: '29s', floatDelay: '2.5s', floatDuration: '5s', path: 'M10,15 Q22,7 34,15 T58,15 T82,15', size: 'w-24 h-10', top: '1/2', right: '14', move: 'move-right-to-left' },
               { color: 'text-yellow-400', delay: '3.5s', duration: '23s', floatDelay: '3s', floatDuration: '4.5s', path: 'M10,15 Q25,10 40,15 T70,15 T90,15', size: 'w-22 h-10', bottom: '24', left: '12', move: 'move-left-to-right' },
@@ -423,10 +419,6 @@ export const MainContent = () => {
 
             {/* Stars */}
             {[
-              { color: 'text-cyan-400', delay: '0.8s', duration: '30s', floatDelay: '0.3s', floatDuration: '4s', size: 'w-6 h-6', top: '10', left: '1/4', move: 'move-left-to-right' },
-              { color: 'text-red-400', delay: '1.3s', duration: '27s', floatDelay: '0.8s', floatDuration: '5s', size: 'w-7 h-7', top: '15', right: '1/4', move: 'move-right-to-left' },
-              { color: 'text-yellow-400', delay: '1.8s', duration: '32s', floatDelay: '1.3s', floatDuration: '4.5s', size: 'w-8 h-8', top: '1/3', left: '1/3', move: 'move-left-to-right' },
-              { color: 'text-orange-400', delay: '2.3s', duration: '29s', floatDelay: '1.8s', floatDuration: '5.5s', size: 'w-6 h-6', top: '1/3', right: '1/3', move: 'move-right-to-left' },
               { color: 'text-cyan-400', delay: '2.8s', duration: '31s', floatDelay: '2.3s', floatDuration: '4s', size: 'w-7 h-7', bottom: '1/4', left: '1/4', move: 'move-left-to-right' },
               { color: 'text-red-400', delay: '3.3s', duration: '26s', floatDelay: '2.8s', floatDuration: '5s', size: 'w-8 h-8', bottom: '1/4', right: '1/4', move: 'move-right-to-left' },
             ].map((star, i) => (
