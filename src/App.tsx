@@ -29,7 +29,7 @@ export const App = () => {
     <Router>
       <ThemeProvider>
         <UserProvider>
-          <body className="text-zinc-900 dark:text-zinc-100 text-base not-italic normal-nums font-normal accent-auto bg-white dark:bg-[#2b3c61] box-border caret-transparent block tracking-[normal] leading-6 list-outside list-disc outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] text-left indent-[0px] normal-case visible border-separate font-ui_sans_serif transition-colors">
+          <body className="text-zinc-900 dark:text-white text-base not-italic normal-nums font-normal accent-auto bg-white dark:bg-black box-border caret-transparent block tracking-[normal] leading-6 list-outside list-disc outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] text-left indent-[0px] normal-case visible border-separate font-ui_sans_serif transition-colors">
           <div className="box-border caret-transparent outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)]">
             <div className="box-border caret-transparent h-[952px] outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)]">
               <Routes>
