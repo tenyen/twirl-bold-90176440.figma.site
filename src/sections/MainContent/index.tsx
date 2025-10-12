@@ -62,7 +62,8 @@ export const MainContent = () => {
             </div>
           </div>
 
-          {/* Animated Butterflies */}
+          {/* Animated Butterflies - Light Mode Only */}
+          {theme === 'light' && (
           <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
             <style>{`
               @keyframes butterfly-flight-1 {
@@ -202,6 +203,7 @@ export const MainContent = () => {
               </svg>
             </div>
           </div>
+          )}
 
           {/* Hand-Drawn Grass at Bottom - Fixed positioning */}
           <div className="fixed bottom-0 left-0 right-0 pointer-events-none z-[90]" style={{ height: '40px' }}>
@@ -564,7 +566,8 @@ export const MainContent = () => {
             </svg>
           </div>
           
-          {/* Cute Ladybug crawling in the grass */}
+          {/* Cute Ladybug crawling in the grass - Light Mode Only */}
+          {theme === 'light' && (
           <div className="fixed bottom-0 left-0 w-full pointer-events-none z-[95]" style={{ height: '40px' }}>
             <style>{`
               @keyframes ladybug-crawl-grass {
@@ -625,6 +628,121 @@ export const MainContent = () => {
               </svg>
             </div>
           </div>
+          )}
+
+          {/* Cute Black Cat - Dark Mode Only */}
+          {theme === 'dark' && (
+          <div className="fixed bottom-0 left-0 w-full pointer-events-none z-[95]" style={{ height: '60px' }}>
+            <style>{`
+              @keyframes cat-walk {
+                0% { left: -15%; }
+                40% { left: 45%; }
+                100% { left: 45%; }
+              }
+              @keyframes cat-tail-sway {
+                0%, 100% { transform: rotate(-10deg); }
+                50% { transform: rotate(15deg); }
+              }
+              @keyframes cat-leg-walk {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-3px); }
+              }
+              @keyframes cat-lie-down {
+                0% { transform: scaleY(1) translateY(0); }
+                100% { transform: scaleY(0.5) translateY(10px); }
+              }
+              @keyframes cat-eye-blink {
+                0%, 90%, 100% { transform: scaleY(1); }
+                95% { transform: scaleY(0.1); }
+              }
+            `}</style>
+            <div className="absolute" style={{ animation: 'cat-walk 15s ease-in-out forwards' }}>
+              <svg className="w-24 h-24" viewBox="0 0 120 120">
+                <g className="cat-body">
+                  {/* Tail */}
+                  <path
+                    d="M 20 70 Q 15 50 18 35"
+                    stroke="#1a1a1a"
+                    strokeWidth="5"
+                    fill="none"
+                    strokeLinecap="round"
+                    style={{
+                      transformOrigin: '20px 70px',
+                      animation: 'cat-tail-sway 1.5s ease-in-out infinite'
+                    }}
+                  />
+
+                  {/* Body */}
+                  <ellipse cx="50" cy="70" rx="25" ry="15" fill="#1a1a1a" />
+
+                  {/* Head */}
+                  <circle cx="75" cy="65" r="18" fill="#1a1a1a" />
+
+                  {/* Ears */}
+                  <path d="M 65 50 L 62 45 L 70 50 Z" fill="#1a1a1a" />
+                  <path d="M 85 50 L 88 45 L 80 50 Z" fill="#1a1a1a" />
+
+                  {/* Inner ears - pink */}
+                  <path d="M 66 50 L 65 47 L 68 50 Z" fill="#FF8A70" opacity="0.6" />
+                  <path d="M 84 50 L 85 47 L 82 50 Z" fill="#FF8A70" opacity="0.6" />
+
+                  {/* Eyes - glowing golden */}
+                  <ellipse
+                    cx="70"
+                    cy="63"
+                    rx="3"
+                    ry="5"
+                    fill="#FFD46A"
+                    style={{ animation: 'cat-eye-blink 4s ease-in-out infinite' }}
+                  />
+                  <ellipse
+                    cx="80"
+                    cy="63"
+                    rx="3"
+                    ry="5"
+                    fill="#FFD46A"
+                    style={{ animation: 'cat-eye-blink 4s ease-in-out infinite' }}
+                  />
+
+                  {/* Pupils */}
+                  <ellipse cx="70" cy="64" rx="1.5" ry="3" fill="#000" />
+                  <ellipse cx="80" cy="64" rx="1.5" ry="3" fill="#000" />
+
+                  {/* Nose */}
+                  <path d="M 75 68 L 73 70 L 77 70 Z" fill="#FF8A70" opacity="0.8" />
+
+                  {/* Whiskers */}
+                  <line x1="65" y1="67" x2="55" y2="65" stroke="#EAEAEA" strokeWidth="0.8" opacity="0.6" />
+                  <line x1="65" y1="69" x2="55" y2="70" stroke="#EAEAEA" strokeWidth="0.8" opacity="0.6" />
+                  <line x1="85" y1="67" x2="95" y2="65" stroke="#EAEAEA" strokeWidth="0.8" opacity="0.6" />
+                  <line x1="85" y1="69" x2="95" y2="70" stroke="#EAEAEA" strokeWidth="0.8" opacity="0.6" />
+
+                  {/* Front legs */}
+                  <g style={{ animation: 'cat-leg-walk 0.6s ease-in-out infinite' }}>
+                    <rect x="45" y="80" width="4" height="12" fill="#1a1a1a" rx="2" />
+                  </g>
+                  <g style={{ animation: 'cat-leg-walk 0.6s ease-in-out infinite 0.3s' }}>
+                    <rect x="60" y="80" width="4" height="12" fill="#1a1a1a" rx="2" />
+                  </g>
+
+                  {/* Back legs */}
+                  <g style={{ animation: 'cat-leg-walk 0.6s ease-in-out infinite 0.15s' }}>
+                    <rect x="28" y="80" width="4" height="12" fill="#1a1a1a" rx="2" />
+                  </g>
+                  <g style={{ animation: 'cat-leg-walk 0.6s ease-in-out infinite 0.45s' }}>
+                    <rect x="38" y="80" width="4" height="12" fill="#1a1a1a" rx="2" />
+                  </g>
+
+                  {/* Paws */}
+                  <ellipse cx="47" cy="93" rx="3" ry="2" fill="#1a1a1a" />
+                  <ellipse cx="62" cy="93" rx="3" ry="2" fill="#1a1a1a" />
+                  <ellipse cx="30" cy="93" rx="3" ry="2" fill="#1a1a1a" />
+                  <ellipse cx="40" cy="93" rx="3" ry="2" fill="#1a1a1a" />
+                </g>
+              </svg>
+            </div>
+          </div>
+          )}
 
           <main className="box-border caret-transparent outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] flex items-center justify-center relative z-10 py-12 md:py-16">
             <div className="max-w-5xl mx-auto px-4 text-center">
