@@ -60,7 +60,7 @@ export const Faces = () => {
                     </button>
                     <button 
                       onClick={() => navigate('/for-you-faces')}
-                      className="text-lg font-semibold bg-white dark:bg-zinc-900 text-black px-12 py-4 border-2 border-black hover:bg-gray-50 transition-colors"
+                      className="text-lg font-semibold bg-white text-black px-12 py-4 border-2 border-black hover:bg-gray-50 transition-colors"
                     >
                       For You
                     </button>
@@ -68,7 +68,7 @@ export const Faces = () => {
                 </div>
 
                 {/* Right Side - Faces Dashboard Mockup */}
-                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative">
+                <div className="bg-white border-2 border-black p-8 relative">
                   <div className="absolute -top-4 right-4 bg-cyan-400 text-white px-4 py-2 border-2 border-black font-semibold">
                     Face Dashboard
                   </div>
@@ -111,7 +111,7 @@ export const Faces = () => {
                         <div className="relative">
                           <input type="checkbox" defaultChecked className="sr-only" />
                           <div className="w-10 h-6 bg-green-500 border-2 border-black flex items-center">
-                            <div className="w-4 h-4 bg-white dark:bg-zinc-900 border-2 border-black transform translate-x-5 transition-transform"></div>
+                            <div className="w-4 h-4 bg-white border-2 border-black transform translate-x-5 transition-transform"></div>
                           </div>
                         </div>
                       </div>
@@ -120,7 +120,7 @@ export const Faces = () => {
                         <div className="relative">
                           <input type="checkbox" className="sr-only" />
                           <div className="w-10 h-6 bg-gray-300 border-2 border-black flex items-center">
-                            <div className="w-4 h-4 bg-white dark:bg-zinc-900 border-2 border-black transform translate-x-1 transition-transform"></div>
+                            <div className="w-4 h-4 bg-white border-2 border-black transform translate-x-1 transition-transform"></div>
                           </div>
                         </div>
                       </div>
@@ -129,7 +129,7 @@ export const Faces = () => {
 
                   {/* Quick Actions */}
                   <div className="grid grid-cols-2 gap-3">
-                    <button className="bg-white dark:bg-zinc-900 text-black py-3 border-2 border-black hover:bg-gray-50 transition-colors font-semibold text-sm">
+                    <button className="bg-white text-black py-3 border-2 border-black hover:bg-gray-50 transition-colors font-semibold text-sm">
                       View Usage Report
                     </button>
                     <button className="bg-cyan-400 text-white py-3 border-2 border-black hover:bg-cyan-500 transition-colors font-semibold text-sm">
@@ -216,7 +216,7 @@ export const Faces = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Step 1 */}
-                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8">
+                <div className="bg-white border-2 border-black p-8">
                   <div className="flex justify-center mb-6">
                     <div className="w-20 h-20 bg-cyan-400 border-2 border-black flex items-center justify-center">
                       <span className="text-4xl font-bold text-white">1</span>
@@ -229,7 +229,7 @@ export const Faces = () => {
                 </div>
 
                 {/* Step 2 */}
-                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8">
+                <div className="bg-white border-2 border-black p-8">
                   <div className="flex justify-center mb-6">
                     <div className="w-20 h-20 bg-cyan-400 border-2 border-black flex items-center justify-center">
                       <span className="text-4xl font-bold text-white">2</span>
@@ -242,7 +242,7 @@ export const Faces = () => {
                 </div>
 
                 {/* Step 3 */}
-                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8">
+                <div className="bg-white border-2 border-black p-8">
                   <div className="flex justify-center mb-6">
                     <div className="w-20 h-20 bg-cyan-400 border-2 border-black flex items-center justify-center">
                       <span className="text-4xl font-bold text-white">3</span>

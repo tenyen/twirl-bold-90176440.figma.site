@@ -193,7 +193,7 @@ export const CreatorSignUp = () => {
     switch (currentStep) {
       case 0: // Initial message
         return (
-          <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative shadow-lg text-center">
+          <div className="bg-white border-2 border-black p-8 relative shadow-lg text-center">
             <h2 className="text-3xl font-bold mb-6">All 200 Creator Slots Are Filled!</h2>
             <p className="text-lg text-gray-700 mb-8">
               The first 200 Creator spots have been filled.<br />
@@ -207,7 +207,7 @@ export const CreatorSignUp = () => {
         );
       case 1:
         return (
-          <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative shadow-lg">
+          <div className="bg-white border-2 border-black p-8 relative shadow-lg">
             <h2 className="text-3xl font-bold text-center mb-8">Step 1: Basic Info</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <div>
@@ -255,7 +255,7 @@ export const CreatorSignUp = () => {
         );
       case 2:
         return (
-          <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative shadow-lg">
+          <div className="bg-white border-2 border-black p-8 relative shadow-lg">
             <h2 className="text-3xl font-bold text-center mb-8">Step 2: Creator Preferences</h2>
             {/* Content Type Multi-select Chips */}
             <div className="mb-6">
@@ -334,7 +334,7 @@ export const CreatorSignUp = () => {
         );
       case 3:
         return (
-          <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative shadow-lg">
+          <div className="bg-white border-2 border-black p-8 relative shadow-lg">
             <h2 className="text-3xl font-bold text-center mb-8">Step 3: Profile Details</h2>
             
             {/* Location */}
@@ -405,7 +405,7 @@ export const CreatorSignUp = () => {
         );
       case 4:
         return (
-          <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative shadow-lg">
+          <div className="bg-white border-2 border-black p-8 relative shadow-lg">
             <h2 className="text-3xl font-bold text-center mb-8">Step 4: Upload Profile Photo</h2>
             <div className="mb-6 text-center">
               <label className="text-sm font-medium block mb-4">Upload a high-quality profile photo:</label>
@@ -437,7 +437,7 @@ export const CreatorSignUp = () => {
         );
       case 5:
         return (
-          <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative shadow-lg">
+          <div className="bg-white border-2 border-black p-8 relative shadow-lg">
             <h2 className="text-3xl font-bold text-center mb-8">Step 5: Create Password</h2>
             <div className="mb-6">
               <label className="text-sm font-medium block mb-2">Password *</label>

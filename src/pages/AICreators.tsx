@@ -34,7 +34,7 @@ export const AICreators = () => {
                     </button>
                     <button 
                       onClick={() => navigate('/for-you')}
-                      className="text-lg font-semibold bg-white dark:bg-zinc-900 text-black px-12 py-4 border-2 border-black hover:bg-gray-50 transition-colors"
+                      className="text-lg font-semibold bg-white text-black px-12 py-4 border-2 border-black hover:bg-gray-50 transition-colors"
                     >
                       For You
                     </button>
@@ -42,7 +42,7 @@ export const AICreators = () => {
                 </div>
 
                 {/* Right Side - Featured Creator Card */}
-                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative">
+                <div className="bg-white border-2 border-black p-8 relative">
                   <div className="absolute -top-4 right-4 bg-yellow-400 text-black px-4 py-2 border-2 border-black font-semibold">
                     Featured Creator
                   </div>
@@ -107,7 +107,7 @@ export const AICreators = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Professional Portfolio */}
-                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 text-center">
+                <div className="bg-white border-2 border-black p-8 text-center">
                   <div className="flex justify-center mb-6">
                     <svg className="w-16 h-16 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
@@ -120,7 +120,7 @@ export const AICreators = () => {
                 </div>
 
                 {/* Studio Connections */}
-                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 text-center">
+                <div className="bg-white border-2 border-black p-8 text-center">
                   <div className="flex justify-center mb-6">
                     <svg className="w-16 h-16 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
@@ -133,7 +133,7 @@ export const AICreators = () => {
                 </div>
 
                 {/* Premium Opportunities */}
-                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 text-center">
+                <div className="bg-white border-2 border-black p-8 text-center">
                   <div className="flex justify-center mb-6">
                     <svg className="w-16 h-16 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -162,7 +162,7 @@ export const AICreators = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {/* Creator 1 - Alex Chen */}
-                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-6">
+                <div className="bg-white border-2 border-black p-6">
                   <div className="flex items-start gap-4 mb-4">
                     <img
                       src="https://c.animaapp.com/mg4iljce82GyUu/img/screenshot-2025-10-05-at-1-06-13-pm.png"
@@ -190,14 +190,14 @@ export const AICreators = () => {
                   </div>
                   <button 
                     onClick={() => navigate('/creator-sign-up')}
-                    className="w-full bg-white dark:bg-zinc-900 text-black py-3 border-2 border-black hover:bg-gray-50 transition-colors font-semibold"
+                    className="w-full bg-white text-black py-3 border-2 border-black hover:bg-gray-50 transition-colors font-semibold"
                   >
                     View Portfolio
                   </button>
                 </div>
 
                 {/* Creator 2 - Maya Rodriguez */}
-                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-6">
+                <div className="bg-white border-2 border-black p-6">
                   <div className="flex items-start gap-4 mb-4">
                     <img
                       src="https://c.animaapp.com/mg4iljce82GyUu/img/screenshot-2025-10-05-at-1-21-46-pm.png"
@@ -225,14 +225,14 @@ export const AICreators = () => {
                   </div>
                   <button 
                     onClick={() => navigate('/creator-sign-up')}
-                    className="w-full bg-white dark:bg-zinc-900 text-black py-3 border-2 border-black hover:bg-gray-50 transition-colors font-semibold"
+                    className="w-full bg-white text-black py-3 border-2 border-black hover:bg-gray-50 transition-colors font-semibold"
                   >
                     View Portfolio
                   </button>
                 </div>
 
                 {/* Creator 3 - Jordan Kim */}
-                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-6">
+                <div className="bg-white border-2 border-black p-6">
                   <div className="flex items-start gap-4 mb-4">
                     <img
                       src="https://c.animaapp.com/mg4iljce82GyUu/img/screenshot-2025-10-05-at-1-13-00-pm.png"
@@ -260,14 +260,14 @@ export const AICreators = () => {
                   </div>
                   <button 
                     onClick={() => navigate('/creator-sign-up')}
-                    className="w-full bg-white dark:bg-zinc-900 text-black py-3 border-2 border-black hover:bg-gray-50 transition-colors font-semibold"
+                    className="w-full bg-white text-black py-3 border-2 border-black hover:bg-gray-50 transition-colors font-semibold"
                   >
                     View Portfolio
                   </button>
                 </div>
 
                 {/* Creator 4 - Sam Taylor */}
-                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-6">
+                <div className="bg-white border-2 border-black p-6">
                   <div className="flex items-start gap-4 mb-4">
                     <img
                       src="https://c.animaapp.com/mg4iljce82GyUu/img/screenshot-2025-10-05-at-1-16-37-pm.png"
@@ -295,7 +295,7 @@ export const AICreators = () => {
                   </div>
                   <button 
                     onClick={() => navigate('/creator-sign-up')}
-                    className="w-full bg-white dark:bg-zinc-900 text-black py-3 border-2 border-black hover:bg-gray-50 transition-colors font-semibold"
+                    className="w-full bg-white text-black py-3 border-2 border-black hover:bg-gray-50 transition-colors font-semibold"
                   >
                     View Portfolio
                   </button>

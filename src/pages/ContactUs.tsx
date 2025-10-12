@@ -20,7 +20,7 @@ export const ContactUs = () => {
                 We're here to help! Reach out to us via email for any inquiries.
               </p>
 
-              <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 mb-8">
+              <div className="bg-white border-2 border-black p-8 mb-8">
                 <h2 className="text-2xl font-bold mb-4">General Inquiries & Support</h2>
                 <p className="text-lg text-gray-800 mb-4">
                   For general questions, technical support, or any assistance:
@@ -33,7 +33,7 @@ export const ContactUs = () => {
                 </a>
               </div>
 
-              <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8">
+              <div className="bg-white border-2 border-black p-8">
                 <h2 className="text-2xl font-bold mb-4">Operations & Partnerships</h2>
                 <p className="text-lg text-gray-800 mb-4">
                   For operational matters, business partnerships, or media inquiries:

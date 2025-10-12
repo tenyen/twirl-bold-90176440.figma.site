@@ -15,7 +15,7 @@ export const ThankYou = () => {
               <div className="box-border caret-transparent max-w-screen-md outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] mx-auto">
                 
                 {/* Thank You Message */}
-                <div className="bg-white dark:bg-zinc-900 box-border caret-transparent gap-x-6 flex flex-col outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] gap-y-6 border-2 border-black p-12 text-center">
+                <div className="bg-white box-border caret-transparent gap-x-6 flex flex-col outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] gap-y-6 border-2 border-black p-12 text-center">
                   <div className="box-border caret-transparent outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)]">
                     <h1 className="text-4xl font-bold box-border caret-transparent leading-tight outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] mb-6 md:text-5xl">
                       You're all set. We'll be reaching out soon :)

@@ -79,7 +79,7 @@ export const SignIn = () => {
                 Access your Likelee account.
               </p>
 
-              <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8">
+              <div className="bg-white border-2 border-black p-8">
                 <form onSubmit={handleSignIn}>
                   <div className="mb-4 text-left">
                     <label className="text-sm font-medium block mb-2">Email Address</label>
