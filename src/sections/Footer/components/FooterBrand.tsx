@@ -12,7 +12,7 @@ export const FooterBrand = () => {
         </span>
       </div>
       <p className="text-neutral-500 text-sm box-border caret-transparent leading-5 outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] mb-4">
-        Secure, transparent licensing for Faces, Creators, and Studios.
+        Connecting Faces, Creators, and Studios through secure, transparent licensing.
       </p>
     </div>
   );
