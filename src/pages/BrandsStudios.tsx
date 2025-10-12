@@ -389,7 +389,7 @@ export const BrandsStudios = () => {
 
   return (
     <div className="box-border caret-transparent outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)]">
-      <div className="relative box-border caret-transparent min-h-screen min-w-px outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] w-full bg-gradient-to-br from-[#F4FDFD] via-[#F8EDE6] to-[#FFFCF5]">
+      <div className="relative box-border caret-transparent min-h-screen min-w-px outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] w-full bg-gradient-to-br from-[#F4FDFD] via-[#F8EDE6] to-[#FFFCF5] dark:from-black dark:via-[#001a33] dark:to-black">
         <div className="box-border caret-transparent min-h-screen outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)]">
           <Navbar />
           
