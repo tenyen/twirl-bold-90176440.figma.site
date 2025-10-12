@@ -33,7 +33,7 @@ export const MainContent = () => {
       <StarConstellationModal isOpen={showModal} onClose={() => setShowModal(false)} />
 
       <div className="relative box-border caret-transparent basis-0 grow shrink-0 min-h-px min-w-px outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] w-full">
-        <div className="bg-gradient-to-br from-[#F4FDFD] via-[#F8EDE6] to-[#FFFCF5] dark:bg-[#2b3c61] box-border caret-transparent min-h-screen outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] relative overflow-hidden pb-8 transition-all duration-1000">
+        <div className="bg-gradient-to-br from-[#F4FDFD] via-[#F8EDE6] to-[#FFFCF5] dark:bg-black box-border caret-transparent min-h-screen outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] relative overflow-hidden pb-8 transition-all duration-1000">
 
           {/* Dark Mode Stars */}
           {theme === 'dark' && (
