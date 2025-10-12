@@ -1,29 +1,9 @@
 export const HandDrawnDecorations = () => {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
-      {/* Top Left - Squiggly Line */}
-      <svg 
-        className="absolute top-0 left-0 w-32 h-32" 
-        style={{ opacity: 0.15 }}
-        viewBox="0 0 100 100"
-      >
-        <path
-          d="M10,50 Q20,30 30,50 T50,50 T70,50 T90,50"
-          stroke="currentColor"
-          strokeWidth="2"
-          fill="none"
-          className="text-cyan-400"
-          strokeDasharray="200"
-          strokeDashoffset="200"
-          style={{
-            animation: 'draw 2s ease-out 0.5s forwards'
-          }}
-        />
-      </svg>
-
       {/* Top Right - Circle Doodle */}
-      <svg 
-        className="absolute top-10 right-20 w-24 h-24" 
+      <svg
+        className="absolute top-10 right-20 w-24 h-24"
         style={{ opacity: 0.15 }}
         viewBox="0 0 100 100"
       >
@@ -53,26 +33,6 @@ export const HandDrawnDecorations = () => {
           strokeDashoffset="125"
           style={{
             animation: 'draw 2s ease-out 1.5s forwards'
-          }}
-        />
-      </svg>
-
-      {/* Middle Left - Star Sketch */}
-      <svg 
-        className="absolute top-1/4 left-5 w-28 h-28" 
-        style={{ opacity: 0.15 }}
-        viewBox="0 0 100 100"
-      >
-        <path
-          d="M50,10 L60,40 L90,40 L65,60 L75,90 L50,70 L25,90 L35,60 L10,40 L40,40 Z"
-          stroke="currentColor"
-          strokeWidth="2"
-          fill="none"
-          className="text-red-400"
-          strokeDasharray="400"
-          strokeDashoffset="400"
-          style={{
-            animation: 'draw 2.5s ease-out 2s forwards'
           }}
         />
       </svg>
