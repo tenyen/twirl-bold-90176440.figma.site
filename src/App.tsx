@@ -20,14 +20,16 @@ import { ForYou2 } from "@/pages/ForYou2";
 import { ForYou3 } from "@/pages/ForYou3";
 import { ContactUs } from "@/pages/ContactUs";
 import { Careers } from "@/pages/Careers";
-import { SignIn } from "@/pages/SignIn"; // New import for SignIn page
-import { UserProvider } from "@/context/UserContext"; // New import for UserProvider
+import { SignIn } from "@/pages/SignIn";
+import { UserProvider } from "@/context/UserContext";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 export const App = () => {
   return (
     <Router>
-      <UserProvider> {/* Wrap the entire app with UserProvider */}
-        <body className="text-zinc-900 text-base not-italic normal-nums font-normal accent-auto bg-white box-border caret-transparent block tracking-[normal] leading-6 list-outside list-disc outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] text-left indent-[0px] normal-case visible border-separate font-ui_sans_serif">
+      <ThemeProvider>
+        <UserProvider>
+          <body className="text-zinc-900 dark:text-zinc-100 text-base not-italic normal-nums font-normal accent-auto bg-white dark:bg-zinc-950 box-border caret-transparent block tracking-[normal] leading-6 list-outside list-disc outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] text-left indent-[0px] normal-case visible border-separate font-ui_sans_serif transition-colors">
           <div className="box-border caret-transparent outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)]">
             <div className="box-border caret-transparent h-[952px] outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)]">
               <Routes>
@@ -58,6 +60,7 @@ export const App = () => {
           </div>
         </body>
       </UserProvider>
+      </ThemeProvider>
     </Router>
   );
 };
