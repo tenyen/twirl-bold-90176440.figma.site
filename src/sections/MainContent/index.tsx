@@ -462,8 +462,12 @@ export const MainContent = () => {
 
           <Navbar />
           
-          {/* Hand-Drawn Sun in Top Right Corner */}
-          <div className="fixed top-4 right-4 md:top-6 md:right-6 pointer-events-none z-[5]">
+          {/* Hand-Drawn Sun/Moon in Top Right Corner */}
+          <div
+            className="fixed top-4 right-4 md:top-6 md:right-6 z-[100] cursor-pointer hover:scale-110 transition-transform duration-300"
+            onClick={toggleTheme}
+            title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+          >
             <style>{`
               @keyframes sun-rays-rotate {
                 0% { transform: rotate(0deg); }
@@ -473,99 +477,90 @@ export const MainContent = () => {
                 0%, 100% { transform: scale(1); }
                 50% { transform: scale(1.05); }
               }
+              @keyframes moon-glow {
+                0%, 100% { opacity: 0.3; }
+                50% { opacity: 0.6; }
+              }
             `}</style>
-            <svg className="w-32 h-32 md:w-40 md:h-40" viewBox="0 0 200 200">
-              {/* Rotating sun rays */}
-              <g style={{ transformOrigin: '100px 100px', animation: 'sun-rays-rotate 30s linear infinite' }}>
-                {/* Long rays */}
-                {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => {
-                  const rad = (angle * Math.PI) / 180;
-                  const x1 = 100 + Math.cos(rad) * 50;
-                  const y1 = 100 + Math.sin(rad) * 50;
-                  const x2 = 100 + Math.cos(rad) * 75;
-                  const y2 = 100 + Math.sin(rad) * 75;
-                  
-                  return (
+            <svg className="w-32 h-32 md:w-40 md:h-40 transition-all duration-1000" viewBox="0 0 200 200">
+              {theme === 'light' ? (
+                <>
+                  {/* Rotating sun rays */}
+                  <g style={{ transformOrigin: '100px 100px', animation: 'sun-rays-rotate 30s linear infinite' }} className="transition-opacity duration-1000">
+                    {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => {
+                      const rad = (angle * Math.PI) / 180;
+                      const x1 = 100 + Math.cos(rad) * 50;
+                      const y1 = 100 + Math.sin(rad) * 50;
+                      const x2 = 100 + Math.cos(rad) * 75;
+                      const y2 = 100 + Math.sin(rad) * 75;
+
+                      return (
+                        <path
+                          key={`long-${i}`}
+                          d={`M ${x1} ${y1} L ${x2} ${y2}`}
+                          stroke="#FFC94D"
+                          strokeWidth="3"
+                          strokeLinecap="round"
+                          opacity="0.8"
+                        />
+                      );
+                    })}
+
+                    {[22.5, 67.5, 112.5, 157.5, 202.5, 247.5, 292.5, 337.5].map((angle, i) => {
+                      const rad = (angle * Math.PI) / 180;
+                      const x1 = 100 + Math.cos(rad) * 50;
+                      const y1 = 100 + Math.sin(rad) * 50;
+                      const x2 = 100 + Math.cos(rad) * 65;
+                      const y2 = 100 + Math.sin(rad) * 65;
+
+                      return (
+                        <path
+                          key={`short-${i}`}
+                          d={`M ${x1} ${y1} L ${x2} ${y2}`}
+                          stroke="#FBBF24"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          opacity="0.7"
+                        />
+                      );
+                    })}
+                  </g>
+
+                  {/* Sun body */}
+                  <g style={{ transformOrigin: '100px 100px', animation: 'sun-pulse 4s ease-in-out infinite' }}>
+                    <circle cx="100" cy="100" r="48" fill="#FFC94D" opacity="0.3" />
                     <path
-                      key={`long-${i}`}
-                      d={`M ${x1} ${y1} L ${x2} ${y2}`}
-                      stroke="#FFC94D"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      opacity="0.8"
-                    />
-                  );
-                })}
-                
-                {/* Short rays in between */}
-                {[22.5, 67.5, 112.5, 157.5, 202.5, 247.5, 292.5, 337.5].map((angle, i) => {
-                  const rad = (angle * Math.PI) / 180;
-                  const x1 = 100 + Math.cos(rad) * 50;
-                  const y1 = 100 + Math.sin(rad) * 50;
-                  const x2 = 100 + Math.cos(rad) * 65;
-                  const y2 = 100 + Math.sin(rad) * 65;
-                  
-                  return (
-                    <path
-                      key={`short-${i}`}
-                      d={`M ${x1} ${y1} L ${x2} ${y2}`}
+                      d="M 100 55 Q 120 55 135 70 Q 145 85 145 100 Q 145 115 135 130 Q 120 145 100 145 Q 80 145 65 130 Q 55 115 55 100 Q 55 85 65 70 Q 80 55 100 55 Z"
+                      fill="#FFC94D"
                       stroke="#FBBF24"
                       strokeWidth="2.5"
-                      strokeLinecap="round"
-                      opacity="0.7"
+                      opacity="0.95"
                     />
-                  );
-                })}
-              </g>
-              
-              {/* Sun body with hand-drawn style */}
-              <g style={{ transformOrigin: '100px 100px', animation: 'sun-pulse 4s ease-in-out infinite' }}>
-                {/* Outer glow circle */}
-                <circle
-                  cx="100"
-                  cy="100"
-                  r="48"
-                  fill="#FFC94D"
-                  opacity="0.3"
-                />
-                
-                {/* Main sun circle - hand drawn with slight irregularity */}
-                <path
-                  d="M 100 55 Q 120 55 135 70 Q 145 85 145 100 Q 145 115 135 130 Q 120 145 100 145 Q 80 145 65 130 Q 55 115 55 100 Q 55 85 65 70 Q 80 55 100 55 Z"
-                  fill="#FFC94D"
-                  stroke="#FBBF24"
-                  strokeWidth="2.5"
-                  opacity="0.95"
-                />
-                
-                {/* Inner highlight */}
-                <ellipse
-                  cx="90"
-                  cy="90"
-                  rx="15"
-                  ry="18"
-                  fill="#FFF"
-                  opacity="0.4"
-                />
-                
-                {/* Cute face */}
-                {/* Eyes */}
-                <circle cx="90" cy="95" r="4" fill="#000" />
-                <circle cx="110" cy="95" r="4" fill="#000" />
-                
-                {/* Smile */}
-                <path
-                  d="M 85 110 Q 100 118 115 110"
-                  stroke="#000"
-                  strokeWidth="2.5"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-                
-                {/* Rosy cheeks */}
-                <circle cx="78" cy="105" r="6" fill="#FF6B6B" opacity="0.3" />
-                <circle cx="122" cy="105" r="6" fill="#FF6B6B" opacity="0.3" />
-              </g>
+                    <ellipse cx="90" cy="90" rx="15" ry="18" fill="#FFF" opacity="0.4" />
+                    <circle cx="90" cy="95" r="4" fill="#000" />
+                    <circle cx="110" cy="95" r="4" fill="#000" />
+                    <path d="M 85 110 Q 100 118 115 110" stroke="#000" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+                    <circle cx="78" cy="105" r="6" fill="#FF6B6B" opacity="0.3" />
+                    <circle cx="122" cy="105" r="6" fill="#FF6B6B" opacity="0.3" />
+                  </g>
+                </>
+              ) : (
+                <>
+                  {/* Moon with glow */}
+                  <g style={{ transformOrigin: '100px 100px' }}>
+                    <circle cx="100" cy="100" r="48" fill="#67e8f9" opacity="0.2" style={{ animation: 'moon-glow 3s ease-in-out infinite' }} />
+                    <circle cx="100" cy="100" r="40" fill="#e0f2fe" />
+                    <circle cx="85" cy="85" r="8" fill="#bae6fd" opacity="0.6" />
+                    <circle cx="110" cy="95" r="6" fill="#bae6fd" opacity="0.5" />
+                    <circle cx="95" cy="110" r="10" fill="#bae6fd" opacity="0.7" />
+                    <circle cx="115" cy="110" r="5" fill="#bae6fd" opacity="0.5" />
+                    <circle cx="88" cy="105" r="4" fill="#7dd3fc" opacity="0.4" />
+                    <circle cx="90" cy="95" r="4" fill="#000" />
+                    <circle cx="110" cy="95" r="4" fill="#000" />
+                    <path d="M 85 110 Q 100 115 115 110" stroke="#000" strokeWidth="2" fill="none" strokeLinecap="round" />
+                  </g>
+                </>
+              )}
             </svg>
           </div>
           
