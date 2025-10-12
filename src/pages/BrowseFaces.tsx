@@ -75,7 +75,7 @@ export const BrowseFaces = () => {
                 </div>
 
                 {/* Filtering Options */}
-                <div className="bg-white border-2 border-black p-8 mb-8">
+                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 mb-8">
                   <h3 className="text-2xl font-bold mb-6">Filter Faces</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     <select

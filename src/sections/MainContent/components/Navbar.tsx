@@ -6,7 +6,7 @@ export const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className="bg-white box-border caret-transparent outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] border-zinc-900/10 border-b border-solid mb-16 md:mb-24">
+    <nav className="bg-white dark:bg-zinc-900 dark:border-black box-border caret-transparent outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] border-zinc-900/10 border-b border-solid mb-16 md:mb-24">
       <div className="items-center box-border caret-transparent flex h-16 justify-between max-w-none outline-[oklab(0.839909_-0.141908_-0.0158958_/_0.5)] w-full mx-auto px-4 md:max-w-screen-xl">
         <NavbarBrand />
         <div className="flex items-center">

@@ -20,7 +20,7 @@ export const Careers = () => {
                 Join our team and help shape the future of AI content creation and digital identity.
               </p>
 
-              <div className="bg-white border-2 border-black p-8 mb-8">
+              <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 mb-8">
                 <h2 className="text-2xl font-bold mb-4">Explore Opportunities</h2>
                 <p className="text-lg text-gray-800 mb-4">
                   We're always looking for passionate individuals to join our growing team. Send your resume and a cover letter to:

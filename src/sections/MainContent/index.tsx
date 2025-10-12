@@ -753,7 +753,7 @@ export const MainContent = () => {
                 <div className="relative w-64 h-64">
                   {/* Central Logo */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-white border-2 border-black flex items-center justify-center rounded-full shadow-lg">
+                    <div className="w-20 h-20 bg-white dark:bg-zinc-900 border-2 border-black flex items-center justify-center rounded-full shadow-lg">
                       <img
                         src="https://c.animaapp.com/mg4iljce82GyUu/img/chatgpt-image-sep-25-2025-09_54_14-pm.png"
                         alt="Likelee Logo"

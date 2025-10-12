@@ -220,7 +220,7 @@ export const SignUp = () => {
     switch (currentStep) {
       case 1:
         return (
-          <div className="bg-white border-2 border-black p-8 relative shadow-lg">
+          <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative shadow-lg">
             <h2 className="text-3xl font-bold text-center mb-8">Step 1: Basic Info</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <div>
@@ -268,7 +268,7 @@ export const SignUp = () => {
         );
       case 2:
         return (
-          <div className="bg-white border-2 border-black p-8 relative shadow-lg">
+          <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative shadow-lg">
             <h2 className="text-3xl font-bold text-center mb-8">Step 2: Preferences</h2>
             {/* Content Type Multi-select Chips */}
             <div className="mb-6">
@@ -355,7 +355,7 @@ export const SignUp = () => {
         );
       case 3:
         return (
-          <div className="bg-white border-2 border-black p-8 relative shadow-lg">
+          <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative shadow-lg">
             <h2 className="text-3xl font-bold text-center mb-8">Step 3: Profile Details</h2>
             
             {/* Location */}
@@ -586,7 +586,7 @@ export const SignUp = () => {
         );
       case 4:
         return (
-          <div className="bg-white border-2 border-black p-8 relative shadow-lg">
+          <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative shadow-lg">
             <h2 className="text-3xl font-bold text-center mb-8">Step 4: Upload Photo</h2>
             <div className="mb-6 text-center">
               <label className="text-sm font-medium block mb-4">Upload a high-quality profile photo:</label>
@@ -618,7 +618,7 @@ export const SignUp = () => {
         );
       case 5:
         return (
-          <div className="bg-white border-2 border-black p-8 relative shadow-lg">
+          <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative shadow-lg">
             <h2 className="text-3xl font-bold text-center mb-8">Step 5: Create Password</h2>
             <div className="mb-6">
               <label className="text-sm font-medium block mb-2">Password *</label>

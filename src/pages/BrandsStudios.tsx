@@ -30,13 +30,13 @@ const mockFaces = [
 
 // Component for the default Brand Dashboard Mockup
 const BrandDashboardMockup = ({ onNewProjectClick, onBrowseFacesClick }: { onNewProjectClick: () => void; onBrowseFacesClick: () => void }) => (
-  <div className="bg-white border-2 border-black p-8 relative">
+  <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative">
     <div className="absolute -top-4 right-4 bg-yellow-400 text-black px-4 py-2 border-2 border-black font-semibold">
       Brand Dashboard
     </div>
     
     <div className="flex items-start gap-6 mb-6">
-      <div className="w-24 h-24 bg-white border-2 border-black flex items-center justify-center">
+      <div className="w-24 h-24 bg-white dark:bg-zinc-900 border-2 border-black flex items-center justify-center">
         <img
           src="https://c.animaapp.com/mg4iljce82GyUu/img/screenshot-2025-10-05-at-2-35-44-pm.png"
           alt="Radiant Beauty Co. Logo"
@@ -146,7 +146,7 @@ const InviteFlowDashboard = ({ onBackClick }: { onBackClick: () => void }) => {
   };
 
   return (
-    <div className="bg-white border-2 border-black p-8 relative">
+    <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative">
       <div className="absolute -top-4 right-4 bg-yellow-400 text-black px-4 py-2 border-2 border-black font-semibold">
         New Project
       </div>
@@ -197,7 +197,7 @@ const InviteFlowDashboard = ({ onBackClick }: { onBackClick: () => void }) => {
           ) : (
             <button
               onClick={() => setShowCreatorInput(true)}
-              className="w-full bg-white text-black py-3 border-2 border-black hover:bg-gray-50 transition-colors font-semibold text-sm"
+              className="w-full bg-white dark:bg-zinc-900 text-black py-3 border-2 border-black hover:bg-gray-50 transition-colors font-semibold text-sm"
             >
               Invite more creators
             </button>
@@ -242,7 +242,7 @@ const InviteFlowDashboard = ({ onBackClick }: { onBackClick: () => void }) => {
           ) : (
             <button
               onClick={() => setShowFaceInput(true)}
-              className="w-full bg-white text-black py-3 border-2 border-black hover:bg-gray-50 transition-colors font-semibold text-sm"
+              className="w-full bg-white dark:bg-zinc-900 text-black py-3 border-2 border-black hover:bg-gray-50 transition-colors font-semibold text-sm"
             >
               Invite more faces
             </button>
@@ -271,7 +271,7 @@ const BrowseFacesDashboard = ({ onBackClick }: { onBackClick: () => void }) => {
   const blurredFaces = mockFaces.slice(6); // The rest are blurred
 
   return (
-    <div className="bg-white border-2 border-black p-8 relative">
+    <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative">
       <div className="absolute -top-4 right-4 bg-yellow-400 text-black px-4 py-2 border-2 border-black font-semibold">
         Browse Faces
       </div>
@@ -435,7 +435,7 @@ export const BrandsStudios = () => {
                     </button>
                     <button 
                       onClick={() => navigate('/for-you-brands')}
-                      className="text-lg font-semibold bg-white text-black px-12 py-4 border-2 border-black hover:bg-gray-50 transition-colors"
+                      className="text-lg font-semibold bg-white dark:bg-zinc-900 text-black px-12 py-4 border-2 border-black hover:bg-gray-50 transition-colors"
                     >
                       For You
                     </button>
@@ -473,7 +473,7 @@ export const BrandsStudios = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                 {/* Advanced Search */}
-                <div className="text-center bg-white border-2 border-black p-8">
+                <div className="text-center bg-white dark:bg-zinc-900 border-2 border-black p-8">
                   <div className="flex justify-center mb-6">
                     <div className="w-24 h-24 bg-cyan-400 border-2 border-black flex items-center justify-center">
                       <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -488,7 +488,7 @@ export const BrandsStudios = () => {
                 </div>
 
                 {/* Instant Licensing */}
-                <div className="text-center bg-white border-2 border-black p-8">
+                <div className="text-center bg-white dark:bg-zinc-900 border-2 border-black p-8">
                   <div className="flex justify-center mb-6">
                     <div className="w-24 h-24 bg-cyan-400 border-2 border-black flex items-center justify-center">
                       <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -503,7 +503,7 @@ export const BrandsStudios = () => {
                 </div>
 
                 {/* Legal Protection */}
-                <div className="text-center bg-white border-2 border-black p-8">
+                <div className="text-center bg-white dark:bg-zinc-900 border-2 border-black p-8">
                   <div className="flex justify-center mb-6">
                     <div className="w-24 h-24 bg-cyan-400 border-2 border-black flex items-center justify-center">
                       <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">

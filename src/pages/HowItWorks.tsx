@@ -38,7 +38,7 @@ export const HowItWorks = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div className="bg-white border-2 border-black p-8 text-center">
+                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 text-center">
                   <div className="flex justify-center mb-6">
                     <div className="w-20 h-20 bg-cyan-400 border-2 border-black flex items-center justify-center">
                       <span className="text-4xl font-bold text-white">1</span>
@@ -50,7 +50,7 @@ export const HowItWorks = () => {
                   </p>
                 </div>
 
-                <div className="bg-white border-2 border-black p-8 text-center">
+                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 text-center">
                   <div className="flex justify-center mb-6">
                     <div className="w-20 h-20 bg-cyan-400 border-2 border-black flex items-center justify-center">
                       <span className="text-4xl font-bold text-white">2</span>
@@ -62,7 +62,7 @@ export const HowItWorks = () => {
                   </p>
                 </div>
 
-                <div className="bg-white border-2 border-black p-8 text-center">
+                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 text-center">
                   <div className="flex justify-center mb-6">
                     <div className="w-20 h-20 bg-cyan-400 border-2 border-black flex items-center justify-center">
                       <span className="text-4xl font-bold text-white">3</span>
@@ -99,7 +99,7 @@ export const HowItWorks = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div className="bg-white border-2 border-black p-8 text-center">
+                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 text-center">
                   <div className="flex justify-center mb-6">
                     <div className="w-20 h-20 bg-red-400 border-2 border-black flex items-center justify-center">
                       <span className="text-4xl font-bold text-white">1</span>
@@ -111,7 +111,7 @@ export const HowItWorks = () => {
                   </p>
                 </div>
 
-                <div className="bg-white border-2 border-black p-8 text-center">
+                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 text-center">
                   <div className="flex justify-center mb-6">
                     <div className="w-20 h-20 bg-red-400 border-2 border-black flex items-center justify-center">
                       <span className="text-4xl font-bold text-white">2</span>
@@ -123,7 +123,7 @@ export const HowItWorks = () => {
                   </p>
                 </div>
 
-                <div className="bg-white border-2 border-black p-8 text-center">
+                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 text-center">
                   <div className="flex justify-center mb-6">
                     <div className="w-20 h-20 bg-red-400 border-2 border-black flex items-center justify-center">
                       <span className="text-4xl font-bold text-white">3</span>
@@ -160,7 +160,7 @@ export const HowItWorks = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div className="bg-white border-2 border-black p-8 text-center">
+                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 text-center">
                   <div className="flex justify-center mb-6">
                     <div className="w-20 h-20 bg-yellow-400 border-2 border-black flex items-center justify-center">
                       <span className="text-4xl font-bold text-black">1</span>
@@ -172,7 +172,7 @@ export const HowItWorks = () => {
                   </p>
                 </div>
 
-                <div className="bg-white border-2 border-black p-8 text-center">
+                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 text-center">
                   <div className="flex justify-center mb-6">
                     <div className="w-20 h-20 bg-yellow-400 border-2 border-black flex items-center justify-center">
                       <span className="text-4xl font-bold text-black">2</span>
@@ -184,7 +184,7 @@ export const HowItWorks = () => {
                   </p>
                 </div>
 
-                <div className="bg-white border-2 border-black p-8 text-center">
+                <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 text-center">
                   <div className="flex justify-center mb-6">
                     <div className="w-20 h-20 bg-yellow-400 border-2 border-black flex items-center justify-center">
                       <span className="text-4xl font-bold text-black">3</span>

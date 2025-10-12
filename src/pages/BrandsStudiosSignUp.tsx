@@ -176,7 +176,7 @@ export const BrandsStudiosSignUp = () => {
     switch (currentStep) {
       case 0: // Initial message
         return (
-          <div className="bg-white border-2 border-black p-8 relative shadow-lg text-center">
+          <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative shadow-lg text-center">
             <h2 className="text-3xl font-bold mb-6">Limited Partner Access — Next 50 Brands Invited</h2>
             <p className="text-lg text-gray-700 mb-8">
               We're expanding Likelee's private beta to a small group of visionary studios shaping the future of AI content.<br />
@@ -189,7 +189,7 @@ export const BrandsStudiosSignUp = () => {
         );
       case 1:
         return (
-          <div className="bg-white border-2 border-black p-8 relative shadow-lg">
+          <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative shadow-lg">
             <h2 className="text-3xl font-bold text-center mb-8">Step 1: Company Info</h2>
             <div className="mb-4">
               <label className="text-sm font-medium block mb-2">Company Name *</label>
@@ -271,7 +271,7 @@ export const BrandsStudiosSignUp = () => {
         );
       case 2:
         return (
-          <div className="bg-white border-2 border-black p-8 relative shadow-lg">
+          <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative shadow-lg">
             <h2 className="text-3xl font-bold text-center mb-8">Step 2: Business Details</h2>
             
             {/* Industry */}
@@ -366,7 +366,7 @@ export const BrandsStudiosSignUp = () => {
         );
       case 3:
         return (
-          <div className="bg-white border-2 border-black p-8 relative shadow-lg">
+          <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative shadow-lg">
             <h2 className="text-3xl font-bold text-center mb-8">Step 3: Project Needs</h2>
             
             {/* Campaign Scale */}
@@ -427,7 +427,7 @@ export const BrandsStudiosSignUp = () => {
         );
       case 4:
         return (
-          <div className="bg-white border-2 border-black p-8 relative shadow-lg">
+          <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 relative shadow-lg">
             <h2 className="text-3xl font-bold text-center mb-8">Step 4: Create Account</h2>
             <div className="mb-6">
               <label className="text-sm font-medium block mb-2">Password *</label>

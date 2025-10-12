@@ -132,7 +132,7 @@ export const Impact = () => {
                   </h2>
                 </AnimatedSection>
                 <AnimatedSection delay={0.2}>
-                  <div className="bg-white border-2 border-black p-8">
+                  <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8">
                     <p className="text-lg text-gray-700">
                       If you've ever spent hours perfecting light in a frame or choosing the right texture for a character, you know craft is inseparable from context. The same applies to technology: pixels are powered by energy, renders move through data centers, and each "export" has a quiet footprint. Acknowledging that link keeps our practice honest—and invites more thoughtful experimentation.
                     </p>
@@ -157,9 +157,9 @@ export const Impact = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Intentional Infrastructure */}
                 <AnimatedSection delay={0.2}>
-                  <div className="bg-white border-2 border-black p-8 text-center">
+                  <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 text-center">
                     <div className="flex justify-center mb-6">
-                      <div className="w-24 h-24 bg-white border-2 border-black flex items-center justify-center">
+                      <div className="w-24 h-24 bg-white dark:bg-zinc-900 border-2 border-black flex items-center justify-center">
                         <svg className="w-12 h-12 text-cyan-400 hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L11 18.5V19h1v-.07l6.79-6.79c.13.58.21 1.17.21 1.79 0 4.08-3.05 7.44-7 7.93v-2.07h-1v2.07zM17.93 11H19c0-4.08-3.05-7.44-7-7.93v2.07h-1V3.07c-3.95.49-7 3.85-7 7.93h1.07L12 5.5V5h1v.07l6.79 6.79z"/>
                         </svg>
@@ -174,9 +174,9 @@ export const Impact = () => {
 
                 {/* Efficiency as a Creative Constraint */}
                 <AnimatedSection delay={0.4}>
-                  <div className="bg-white border-2 border-black p-8 text-center">
+                  <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 text-center">
                     <div className="flex justify-center mb-6">
-                      <div className="w-24 h-24 bg-white border-2 border-black flex items-center justify-center">
+                      <div className="w-24 h-24 bg-white dark:bg-zinc-900 border-2 border-black flex items-center justify-center">
                         <svg className="w-12 h-12 text-yellow-400 hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/>
                         </svg>
@@ -191,9 +191,9 @@ export const Impact = () => {
 
                 {/* Transparent Defaults */}
                 <AnimatedSection delay={0.6}>
-                  <div className="bg-white border-2 border-black p-8 text-center">
+                  <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8 text-center">
                     <div className="flex justify-center mb-6">
-                      <div className="w-24 h-24 bg-white border-2 border-black flex items-center justify-center">
+                      <div className="w-24 h-24 bg-white dark:bg-zinc-900 border-2 border-black flex items-center justify-center">
                         <svg className="w-12 h-12 text-orange-400 hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
                         </svg>
@@ -222,7 +222,7 @@ export const Impact = () => {
                   </h2>
                 </AnimatedSection>
                 <AnimatedSection delay={0.2}>
-                  <div className="bg-white border-2 border-black p-8">
+                  <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8">
                     <p className="text-lg text-gray-700 mb-4">
                       Our roadmap is shaped in partnership with the community. We host quarterly roundtables with creators, sustainability advocates, and technologists to share insights and co-design features that balance ambition with responsibility.
                     </p>
@@ -245,7 +245,7 @@ export const Impact = () => {
                   </h2>
                 </AnimatedSection>
                 <AnimatedSection delay={0.2}>
-                  <div className="bg-white border-2 border-black p-8">
+                  <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8">
                     <p className="text-lg text-gray-700">
                       We won't guilt-trip you, and we won't bury the reality of impact behind marketing gloss. Creativity thrives on clarity, not shame. That's why we speak plainly about trade-offs and invite feedback instead of locking in pledges that can't evolve with the craft.
                     </p>
@@ -268,7 +268,7 @@ export const Impact = () => {
                   </h2>
                 </AnimatedSection>
                 <AnimatedSection delay={0.2}>
-                  <div className="bg-white border-2 border-black p-8">
+                  <div className="bg-white dark:bg-zinc-900 border-2 border-black p-8">
                     <p className="text-lg text-gray-700">
                       If you choose to upload your face, license imagery, or build campaigns on Likelee, you're part of an ecosystem that values both artistic freedom and ecological mindfulness. Simple steps—like opting for efficient render presets or batching jobs—can make a difference, but the choice remains yours. We're here to make sustainable options feel intuitive, not restrictive.
                     </p>
