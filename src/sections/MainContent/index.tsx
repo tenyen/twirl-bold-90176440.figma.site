@@ -9,7 +9,7 @@ import { StarConstellationModal } from "@/components/StarConstellationModal";
 
 export const MainContent = () => {
   const navigate = useNavigate();
-  const { theme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
   const [typedText, setTypedText] = useState("");
   const [showModal, setShowModal] = useState(false);
   const fullText = "Welcome to the Likelee Ecosystem.";
